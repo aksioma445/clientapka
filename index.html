@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розіграш</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Екран вибору мови -->
+        <div id="languageSelection" class="language-selection">
+            <h1>Оберіть мову / Выберите язык</h1>
+            <button class="language-button" data-lang="uk">Українська</button>
+            <button class="language-button" data-lang="ru">Русский</button>
+        </div>
+
+        <!-- Крок 1: Капча -->
+        <div id="captchaSection" class="hidden">
+            <h1 id="captchaTitle"></h1>
+            <div class="captcha">
+                <span id="captchaText"></span><strong id="captchaCode"></strong>
+            </div>
+            <input type="text" id="captchaInput" />
+            <button id="captchaButton"></button>
+        </div>
+
+        <!-- Крок 2: Канали -->
+        <div id="channelSection" class="hidden">
+            <h2 id="channelTitle"></h2>
+            <div class="channels-list">
+                <a href="https://t.me/+cCO0UsTyGio5ZDNi" target="_blank">
+                    <div class="channel-btn" style="background-image: url('1.png');"></div>
+                </a>
+            </div>
+            <button id="confirmSubscription"></button>
+        </div>
+
+        <!-- Крок 3: Підтвердження -->
+        <div id="thankYouSection" class="hidden">
+            <p id="thankYouText"></p>
+            <button id="formButton"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
